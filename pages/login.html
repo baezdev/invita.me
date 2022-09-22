@@ -16,19 +16,42 @@
     <title>Invita. Me (Iniciar Sesión)</title>
   </head>
   <body>
-    <div class="navbar__container">
-      <nav class="navbar container">
-        <div class="navbar__logo-container">
-          <img src="../images/logo.svg" alt="logo" />
+    <main class="page__complete center__section bg-clip">
+      <section class="login__container">
+        <div class="login__title">
+          <h3>Iniciar Sesión</h3>
+          <img src="../images/logo.svg" alt="Logo" />
         </div>
-        <ul class="navbar__links-container"></ul>
-        <ul class="navbar__session-container">
-          <li>
-            <a class="btn btn-primary" href="#">Acceder</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <script src="../js/main.js"></script>
+        <form class="login">
+          <div class="login__input-container">
+            <label for=""> Correo Electrónico: </label>
+            <div class="login__input">
+              <input
+                type="text"
+                name="email"
+                placeholder="correo@correo.ejemplo"
+              />
+            </div>
+          </div>
+          <div class="login__input-container">
+            <label for=""> Contraseña: </label>
+            <div class="login__input">
+              <input
+                type="password"
+                name="password"
+                placeholder="Tu Contraseña"
+              />
+            </div>
+          </div>
+          <div class="button__container">
+            <button class="button button__gradient">Iniciar Sesión</button>
+          </div>
+          <div class="register__link">
+            <span>Ya tienes Cuenta?</span>
+            <a href="#">Registrate</a>
+          </div>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
