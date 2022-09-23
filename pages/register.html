@@ -13,16 +13,30 @@
     />
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/index.css" />
-    <title>Invita. Me (Iniciar Sesión)</title>
+    <title>Invita. Me (Registrate)</title>
   </head>
   <body>
     <main class="page__complete center__section bg-clip">
       <section class="login__container">
         <div class="login__title">
-          <h3>Iniciar Sesión</h3>
+          <h3>Registrarse</h3>
           <img src="../images/logo.svg" alt="Logo" />
         </div>
         <form class="login">
+          <div class="double__input-container">
+            <div class="login__input-container">
+              <label for=""> Nombre: </label>
+              <div class="login__input">
+                <input type="text" name="name" placeholder="Tu Nombre" />
+              </div>
+            </div>
+            <div class="login__input-container">
+              <label for=""> Apellido: </label>
+              <div class="login__input">
+                <input type="text" name="lastname" placeholder="Tu Apellido" />
+              </div>
+            </div>
+          </div>
           <div class="login__input-container">
             <label for=""> Correo Electrónico: </label>
             <div class="login__input">
@@ -44,11 +58,11 @@
             </div>
           </div>
           <div class="button__container">
-            <button class="button button__gradient">Iniciar Sesión</button>
+            <button class="button button__gradient">Registrarse</button>
           </div>
           <div class="register__link">
-            <span>No tienes Cuenta?</span>
-            <a href="./register.html">Registrate</a>
+            <span>Ya tienes Cuenta?</span>
+            <a href="./login.html">Inicia Sesión</a>
           </div>
         </form>
       </section>
