@@ -22,7 +22,7 @@ body {
 
 /* Helpers */
 .container {
-  width: min(100% - 2rem, 1600px);
+  width: min(100% - 3rem, 1600px);
   margin-inline: auto;
 }
 
@@ -44,10 +44,16 @@ body {
   font-size: 1.5rem;
   transition: all 0.2s ease-in-out;
   color: #fff;
+  font-weight: 600;
 }
 
 .btn-primary {
   background: var(--yellow);
+}
+
+.btn-secundary {
+  background: var(--darkGreen);
+  text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -93,6 +99,22 @@ body {
   opacity: 0;
 }
 
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+#button__menu {
+  background: var(--yellow);
+  padding: 1rem;
+  border: none;
+  font-size: 2.5rem;
+  border-radius: 6px;
+}
+
 /* Header */
 .header {
   width: 100%;
@@ -117,6 +139,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .navbar__logo-container {
@@ -127,13 +150,58 @@ body {
   width: 80%;
 }
 
-.navbar__links-container {
+.navbar__links-container,
+.menu__responsive {
   list-style: none;
-  display: flex;
-  gap: 6rem;
+  gap: 4rem;
   justify-self: center;
   font-size: 1.8rem;
   padding: 0;
+}
+
+.navbar__links-container {
+  display: none;
+}
+
+.navbar__session-container a {
+  display: none;
+}
+
+.navbar__session-container button {
+  display: block;
+}
+
+@media (min-width: 940px) {
+  .navbar__links-container {
+    display: flex;
+  }
+
+  .navbar__session-container a {
+    display: block;
+  }
+
+  .navbar__session-container button {
+    display: none;
+  }
+
+  .menu__responsive-container {
+    display: none;
+  }
+}
+
+.menu__responsive-container {
+  width: 100%;
+  background-color: var(--mint);
+  padding: 5rem 3rem;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+}
+
+.menu__responsive-container .menu__responsive {
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar__session-container {
@@ -145,7 +213,8 @@ body {
 }
 
 .navbar__links-container a,
-.navbar__session-container a {
+.navbar__session-container a,
+.menu__responsive a {
   text-decoration: none;
   color: var(--darkGreen);
   font-weight: 700;

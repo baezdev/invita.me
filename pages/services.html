@@ -11,6 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/index.css" />
     <title>Servicios</title>
@@ -18,6 +25,7 @@
 
   <body>
     <header id="cabecera">
+      <!-- Navbar **********************************************-->
       <div class="navbar__container">
         <nav class="navbar container">
           <div class="navbar__logo-container">
@@ -31,10 +39,22 @@
           <ul class="navbar__session-container">
             <li>
               <a class="btn btn-primary" href="./login.html">Acceder</a>
+              <button id="button__menu">
+                <i class="fa-solid fa-bars"></i>
+              </button>
             </li>
           </ul>
         </nav>
+        <div class="menu__responsive-container hidden">
+          <ul class="menu__responsive">
+            <li>
+              <a class="navbar__links-link" href="../index.html">Inicio</a>
+            </li>
+          </ul>
+          <a class="btn btn-secundary" href="./login.html">Acceder</a>
+        </div>
       </div>
+      <!-- Navbar **********************************************-->
       <section class="container header__title-container">
         <div id="intro">
           <h2>Conoce nuestros planes y propuestas que tenemos para ti.</h2>
