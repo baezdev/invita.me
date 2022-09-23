@@ -354,3 +354,29 @@ body {
   background: var(--darkGreen);
   color: var(--yellow);
 }
+/*plantillas*/
+
+.container-element {
+  text-align: center;
+  align-items: center;
+  margin: 25px;
+  color: white;
+  width: 300px;
+  height: auto;
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 25px;
+  background-color: var(--green);
+  border-radius: 10px;
+}
+.image-catalog {
+	height: 200px;
+	padding: 5px;
+	align-items: center;
+}
+.partial-page {
+	width: 100%;
+	align-items: center;
+	text-align: center;
+}
