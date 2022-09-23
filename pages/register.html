@@ -15,57 +15,81 @@
     <link rel="stylesheet" href="../css/index.css" />
     <title>Invita. Me (Registrate)</title>
   </head>
-  <body>
-    <main class="page__complete center__section bg-clip">
-      <section class="login__container">
-        <div class="login__title">
-          <h3>Registrarse</h3>
-          <img src="../images/logo.svg" alt="Logo" />
-        </div>
-        <form class="login">
-          <div class="double__input-container">
-            <div class="login__input-container">
-              <label for=""> Nombre: </label>
-              <div class="login__input">
-                <input type="text" name="name" placeholder="Tu Nombre" />
+  <body class="bg-clip">
+    <main class="page__complete">
+      <div class="navbar__container">
+        <nav class="navbar container">
+          <div class="navbar__logo-container">
+            <img src="../images/logo.svg" alt="logo" />
+          </div>
+          <ul class="navbar__links-container">
+            <li>
+              <a class="navbar__links-link" href="../index.html">Inicio</a>
+            </li>
+          </ul>
+          <ul class="navbar__session-container none__opactity">
+            <li>
+              <a class="btn btn-primary" href="./pages/login.html">Acceder</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="center__section h-with__nav">
+        <section class="login__container">
+          <div class="login__title">
+            <h3>Registrarse</h3>
+            <img src="../images/logo.svg" alt="Logo" />
+          </div>
+          <form class="login">
+            <div class="double__input-container">
+              <div class="login__input-container">
+                <label for=""> Nombre: </label>
+                <div class="login__input">
+                  <input type="text" name="name" placeholder="Tu Nombre" />
+                </div>
+              </div>
+              <div class="login__input-container">
+                <label for=""> Apellido: </label>
+                <div class="login__input">
+                  <input
+                    type="text"
+                    name="lastname"
+                    placeholder="Tu Apellido"
+                  />
+                </div>
               </div>
             </div>
             <div class="login__input-container">
-              <label for=""> Apellido: </label>
+              <label for=""> Correo Electrónico: </label>
               <div class="login__input">
-                <input type="text" name="lastname" placeholder="Tu Apellido" />
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="correo@correo.ejemplo"
+                />
               </div>
             </div>
-          </div>
-          <div class="login__input-container">
-            <label for=""> Correo Electrónico: </label>
-            <div class="login__input">
-              <input
-                type="text"
-                name="email"
-                placeholder="correo@correo.ejemplo"
-              />
+            <div class="login__input-container">
+              <label for=""> Contraseña: </label>
+              <div class="login__input">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Tu Contraseña"
+                />
+              </div>
             </div>
-          </div>
-          <div class="login__input-container">
-            <label for=""> Contraseña: </label>
-            <div class="login__input">
-              <input
-                type="password"
-                name="password"
-                placeholder="Tu Contraseña"
-              />
+            <div class="button__container">
+              <button class="button button__gradient">Registrarse</button>
             </div>
-          </div>
-          <div class="button__container">
-            <button class="button button__gradient">Registrarse</button>
-          </div>
-          <div class="register__link">
-            <span>Ya tienes Cuenta?</span>
-            <a href="./login.html">Inicia Sesión</a>
-          </div>
-        </form>
-      </section>
+            <div class="register__link">
+              <span>Ya tienes Cuenta?</span>
+              <a href="./login.html">Inicia Sesión</a>
+            </div>
+          </form>
+        </section>
+      </div>
     </main>
+    <script src="../js/main.js"></script>
   </body>
 </html>
