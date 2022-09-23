@@ -1,0 +1,356 @@
+:root {
+  /* Colors */
+  --yellow: #feedaa;
+  --mint: #b6e2d3;
+  --green: #616d69;
+  --darkGreen: #2b3230;
+  --black: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+}
+
+/* Helpers */
+.container {
+  width: min(100% - 2rem, 1600px);
+  margin-inline: auto;
+}
+
+.page__complete {
+  width: 100%;
+  height: 100vh;
+}
+
+.center__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background: transparent;
+  padding: 2rem 4rem;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+}
+
+.btn-primary {
+  background: var(--yellow);
+}
+
+.btn-primary:hover {
+  background: var(--darkGreen);
+  color: #feedaa;
+}
+
+.button {
+  background: transparent;
+  border-radius: 8px;
+  padding: 1.4rem 1rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.button__gradient {
+  background: linear-gradient(90rad, var(--mint), var(--yellow));
+  color: var(--darkGreen);
+}
+
+.button__container {
+  margin-top: 4rem;
+}
+
+.bg-clip {
+  width: 100%;
+  background-color: #b6e2d3;
+  opacity: 1;
+  background-image: radial-gradient(#d3ede4 2px, #b6e2d3 2px);
+  background-size: 40px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.h-with__nav {
+  height: calc(100vh - 119.98px);
+}
+
+.none__opactity {
+  opacity: 0;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  height: 70vh;
+  background-color: #b6e2d3;
+  opacity: 1;
+  background-image: radial-gradient(#d3ede4 2px, #b6e2d3 2px);
+  background-size: 40px 40px;
+}
+
+/* Navbar */
+
+.navbar__container {
+  background-color: #b6e2d3;
+  opacity: 1;
+  background-image: radial-gradient(#d3ede4 2px, #b6e2d3 2px);
+  background-size: 40px 40px;
+}
+
+.navbar {
+  padding: 1.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo-container {
+  width: 140px;
+}
+
+.navbar__logo-container img {
+  width: 80%;
+}
+
+.navbar__links-container {
+  list-style: none;
+  display: flex;
+  gap: 6rem;
+  justify-self: center;
+  font-size: 1.8rem;
+  padding: 0;
+}
+
+.navbar__session-container {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  font-size: 1.8rem;
+  padding: 0;
+}
+
+.navbar__links-container a,
+.navbar__session-container a {
+  text-decoration: none;
+  color: var(--darkGreen);
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar__links-container a:hover {
+  border-bottom: 3px solid var(--yellow);
+}
+
+.navbar__links-container a:visited {
+  color: var(--darkGreen);
+}
+
+.header__title-container {
+  position: relative;
+}
+
+.header__title-container h1 {
+  margin: 10rem 0 1rem 0;
+  font-size: 10rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+.header__title-container h2 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.header__title-container p {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.header__title-img {
+  width: fit-content;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 100%;
+  width: 45rem;
+}
+
+.header__title-img img {
+  width: 100%;
+}
+
+/* Login and Register */
+.login__container {
+  width: 460px;
+  padding: 4.5rem 3.5rem;
+  background: #fff;
+  border-radius: 25px;
+}
+
+.login__container .login__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.login__container .login__title h3 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.login__container .login__title img {
+  width: 100px;
+}
+
+.login .login__input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.login .login__input-container label {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.login .login__input-container .login__input {
+  padding: 0.2rem;
+  background: linear-gradient(90rad, var(--mint), var(--yellow));
+  border-radius: 8px;
+}
+
+.login__input input {
+  padding: 1.4rem 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+.login__input input:focus {
+  outline: none;
+  border: 2px solid var(--green);
+}
+
+.register__link {
+  margin-top: 2rem;
+}
+
+.register__link {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.register__link a {
+  font-weight: 700;
+  color: var(--darkGreen);
+  text-decoration: none;
+}
+
+.double__input-container {
+  display: flex;
+  gap: 2rem;
+}
+
+/***********************************/
+/*Estilos de la pagina de servicios*/
+/***********************************/
+
+#cabecera {
+  width: 100%;
+  height: 40vh;
+  background-color: #b6e2d3;
+  opacity: 1;
+  background-image: radial-gradient(#d3ede4 2px, #b6e2d3 2px);
+  background-size: 40px 40px;
+}
+
+#intro {
+  position: absolute;
+  height: fit-content;
+  margin-top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#planes {
+  margin-top: 2.5%;
+  display: flex;
+  justify-content: center;
+  column-gap: 100px;
+}
+
+#planes h2 {
+  font-size: 3rem;
+}
+
+#costo {
+  bottom: 125px;
+  position: absolute;
+}
+
+#contenedor {
+  color: white;
+  width: 300px;
+  height: 400px;
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: var(--green);
+  border-radius: 10px;
+}
+
+#contenedor p {
+  font-size: 2rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+#divBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.botonazo {
+  margin-bottom: 1%;
+  background: var(--yellow);
+  bottom: 40px;
+  position: absolute;
+  text-decoration: none;
+  color: var(--darkGreen);
+  font-weight: 700;
+  text-transform: capitalize;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+.botonazo:hover {
+  background: var(--darkGreen);
+  color: var(--yellow);
+}
