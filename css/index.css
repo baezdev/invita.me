@@ -368,58 +368,123 @@ body {
   transform: translate(-50%, -50%);
 }
 
-#planes {
-  margin-top: 2.5%;
-  display: flex;
-  justify-content: center;
-  column-gap: 100px;
+.contenedor{
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
 }
 
-#planes h2 {
+.sPrecios{
+  padding: 4.5rem 0 2rem;
+}
+
+.contenedorP {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tarjetaP,
+.formaP,
+.listaP {
+  display: grid;
+}
+
+.tarjetaP {
+  width: 450px;
+  row-gap: 2rem;
+  background-color: var(--black);
+  padding: 2rem 2.5rem;
+}
+
+.imgP {
+  width: 35px;
+}
+
+.formaP {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  place-items: center;
+  margin-bottom: 1rem;
+}
+
+.tituloP {
+  font-size: 4rem;
+  color:whitesmoke;
+  margin-bottom: 1rem;
+}
+
+.costo {
+  font-size: 3.5rem;
+}
+
+.listaP {
+  row-gap: 1rem;
+}
+
+.caracP {
+  display: flex;
+  column-gap: 3rem;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.caracP i {
   font-size: 3rem;
 }
 
-#costo {
-  bottom: 125px;
-  position: absolute;
+.caracP-opacity {
+  opacity: 3;
 }
 
-#contenedor {
-  color: white;
-  width: 300px;
-  height: 400px;
-  padding-top: 25px;
-  padding-left: 30px;
-  padding-right: 30px;
-  background-color: var(--green);
-  border-radius: 10px;
-}
-
-#contenedor p {
-  font-size: 2rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.5rem;
-}
-
-#divBtn {
-  display: flex;
-  justify-content: center;
-}
-
-.botonazo {
-  margin-bottom: 1%;
-  background: var(--yellow);
-  bottom: 40px;
-  position: absolute;
+.botonP {
+  background-color: var(--yellow);
+  color:#000;
   text-decoration: none;
-  color: var(--darkGreen);
-  font-weight: 700;
-  text-transform: capitalize;
-  transition: all 0.2s ease-in-out;
-  border-bottom: 3px solid transparent;
+  width: fit-content;
 }
 
-.botonazo:hover {
-  background: var(--darkGreen);
+.botonP:hover {
+  background-color: var(--green);
+}
+
+.tarjetaP-active {
+  background-color: var(--darkGreen);
+  border: 8px solid var(--mint);
+  border-radius: 2rem;
+  padding: 3rem;
+}
+
+.tarjetaP-active .formaP {
+  background-color: var(--mint);
+}
+
+.tarjetaP-active .caracP i {
   color: var(--yellow);
+}
+
+.tarjetaP-active .tituloP,
+.tarjetaP-active .costo,
+.tarjetaP-active .caracP {
+  color: whitesmoke;
+}
+
+@media (max-width: 480px) {
+
+  #intro,
+  #intro h2 {
+    font-size: 2.5rem;
+    width: fit-content;
+    transform: none;
+    left: auto;
+    padding-bottom: 10;
+    margin-top: 20px;
+  }
+
+  .contenedorP {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    row-gap: 100px;
+  }
 }
