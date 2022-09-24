@@ -564,42 +564,4 @@ img {
   border-radius: 10px;
   text-align: center;
 }
-#quienes_somos{
-  text-align: center;
-}
-#info { 
-	background: var(--mint);
-	color: #000000; 
-	text-align: center; 
-	padding: 20px; 
-} 
-
-#info .contenedor { 
-	display: flex; 
-	flex-wrap: wrap; 
-	justify-content: center; 
-} 
-
-.info-ma { 
-	margin: 20px; 
-} 
-
-.info-ma img{ 
-	width: 260px; 
-	height: 260px; 
-	border-radius: 50%; 
-	border: 7px solid #000000; 
-} 
-
-@media (min-width:480px){ 
-	.info-ma{ 
-		width: 40%; 
-	}
-}
-
-@media (min-width:1024px){ 
-	.info-ma{ 
-		width: auto; 
-	} 
-} 
 }

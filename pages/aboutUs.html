@@ -5,11 +5,15 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="../images/logo.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../css/normalize.css" />
   <link rel="stylesheet" href="../css/index.css" />
   <title>¿Quienes somos?</title>
@@ -17,60 +21,56 @@
 
 <body>
   <header id="cabecera">
-    <nav class="container navbar">
-      <div class="navbar__logo-container">
-        <img src="../images/logo.svg" alt="logo" />
+    <!-- Navbar **********************************************-->
+    <div class="navbar__container">
+      <nav class="navbar container">
+        <div class="navbar__logo-container">
+          <img src="../images/logo.svg" alt="logo" />
+        </div>
+        <ul class="navbar__links-container">
+          <li>
+            <a class="navbar__links-link" href="../index.html">Inicio</a>
+          </li>
+        </ul>
+        <ul class="navbar__session-container">
+          <li>
+            <a class="btn btn-primary" href="./login.html">Acceder</a>
+            <button id="button__menu">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu__responsive-container hidden">
+        <ul class="menu__responsive">
+          <li>
+            <a class="navbar__links-link" href="../index.html">Inicio</a>
+          </li>
+        </ul>
+        <a class="btn btn-secundary" href="./login.html">Acceder</a>
       </div>
-      <ul class="navbar__links-container"></ul>
-      <ul class="navbar__session-container">
-        <li>
-          <a class="btn btn-primary" href="iniciar-sesion">Acceder</a>
-        </li>
-      </ul>
-    </nav>
+    </div>
+    <!-- Navbar **********************************************-->
     <section class="container header__title-container">
       <div id="intro">
         <h2>Conocenos</h2>
       </div>
-        <br>
     </section>
   </header>
   <br>
-  <br>
   <main>
-    <section id="quienes_somos"> 
-        <br>
-        <h2>¿Quienes somos?</h2>
-        <br>
-        <p> Somos una empresa dedicada a la creacion de invitaciones digitales,con el objetivo
-            de darle a nuestros clientes facilidad e innovacion para todos sus eventos
-        </p> 
-    </section> 
-    <div id="planes">
-      <div id="contenedor_conocenos">
-        <h2>Misión</h2>
-        <p></p>
+      <div class="contenedor_con">
+        <div class="contenedorP cGrid">
+          <article class="tarjetaP tarjetaP-active">
+            <header class="cabeceraP">
+              <div class="formaP">
+          </article>
+          <article class="tarjetaP tarjetaP-active">
+            <header class="cabeceraP">
+              <div class="formaP">
+          </article>
+        </div>
       </div>
-      <div id="contenedor_conocenos">
-        <h2>Vision</h2>
-        <p></p>
-      </div>
-    </div>
-    <br>
-    <br>
-    <section id="info"> 
-        <div class="contenedor"> 
-            <div class="info-ma"> 
-                <img src="/images/innovacion.jpg">  
-            </div> 
-            <div class="info-ma"> 
-                <img src="/images/creatividad.jpg"> 
-            </div> 
-            <div class="info-ma"> 
-                <img src="/images/tecnologia.jpg" > 
-            </div> 
-        </div> 
-    </section> 
   </main>
   <script src="../js/main.js"></script>
 </body>
