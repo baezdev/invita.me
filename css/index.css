@@ -547,21 +547,44 @@ img {
     row-gap: 100px;
   }
 
-  
-  /***********************************/
 /*Estilos de la pagina quienes somos*/
-/***********************************/
-
-
-#contenedor_conocenos{
-  color: black;
-  width: 600px;
-  height: 400px;
-  padding-top: 25px;
-  padding-left: 30px;
-  padding-right: 30px;
-  background-color: var(--yellow);
-  border-radius: 10px;
+/**********************************/
+}
+#quienesSomos{
   text-align: center;
 }
+#info { 
+	background: #e69a9a; 
+	color: #000000; 
+	text-align: center; 
+	padding: 20px; 
+} 
+
+#info .contenedor { 
+	display: flex; 
+	flex-wrap: wrap; 
+	justify-content: center; 
+} 
+
+.info-ma { 
+	margin: 20px; 
+} 
+
+.info-ma img{ 
+	width: 180px; 
+	height: 180px; 
+	border-radius: 50%; 
+	border: 7px solid #000000; 
+} 
+
+@media (min-width:480px){ 
+	.info-ma{ 
+		width: 40%; 
+	}
+}
+
+@media (min-width:1024px){ 
+	.info-ma{ 
+		width: auto; 
+	} 
 }
