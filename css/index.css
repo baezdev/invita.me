@@ -119,6 +119,10 @@ img {
   border-radius: 6px;
 }
 
+.margin__bottom {
+  margin-bottom: 10rem;
+}
+
 /* Header */
 .header {
   width: 100%;
@@ -379,7 +383,7 @@ img {
 /* Home */
 
 .welcome__section-container {
-  padding: .5rem;
+  padding: 0.5rem;
   background: linear-gradient(90rad, var(--mint), var(--yellow));
   border-radius: 8px;
 }
@@ -425,12 +429,12 @@ img {
   transform: translate(-50%, -50%);
 }
 
-.contenedor{
+.contenedor {
   margin-right: 1.5rem;
   margin-left: 1.5rem;
 }
 
-.sPrecios{
+.sPrecios {
   padding: 4.5rem 0 2rem;
 }
 
@@ -466,7 +470,7 @@ img {
 
 .tituloP {
   font-size: 4rem;
-  color:whitesmoke;
+  color: whitesmoke;
   margin-bottom: 1rem;
 }
 
@@ -495,7 +499,7 @@ img {
 
 .botonP {
   background-color: var(--yellow);
-  color:#000;
+  color: #000;
   text-decoration: none;
   width: fit-content;
 }
@@ -526,7 +530,6 @@ img {
 }
 
 @media (max-width: 480px) {
-
   #intro,
   #intro h2 {
     font-size: 2.5rem;
