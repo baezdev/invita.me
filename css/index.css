@@ -554,9 +554,7 @@ img {
   text-align: center;
 }
 #info { 
-	background: #e69a9a; 
-	color: #000000; 
-	text-align: center; 
+  background: var(--mint);
 	padding: 20px; 
 } 
 
