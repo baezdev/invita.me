@@ -11,37 +11,78 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <title>Invita. Me</title>
   </head>
   <body>
-    <header class="header">
-      <div class="navbar__container">
-        <nav class="navbar container">
-          <div class="navbar__logo-container">
-            <img src="./images/logo.svg" alt="logo" />
+    <div class="page__complete">
+      <header class="header">
+        <!-- Navbar **********************************************-->
+        <div class="navbar__container">
+          <nav class="navbar container">
+            <div class="navbar__logo-container">
+              <img src="./images/logo.svg" alt="logo" />
+            </div>
+            <ul class="navbar__links-container">
+              <li>
+                <a class="navbar__links-link" href="index.html">Inicio</a>
+              </li>
+            </ul>
+            <ul class="navbar__session-container">
+              <li>
+                <a class="btn btn-primary" href="./pages/login.html">Acceder</a>
+                <button id="button__menu">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu__responsive-container hidden">
+            <ul class="menu__responsive">
+              <li>
+                <a class="navbar__links-link" href="index.html">Inicio</a>
+              </li>
+            </ul>
+            <a class="btn btn-secundary" href="./pages/login.html">Acceder</a>
           </div>
-          <ul class="navbar__links-container"></ul>
-          <ul class="navbar__session-container">
-            <li>
-              <a class="btn btn-primary" href="./pages/login.html">Acceder</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <section class="container header__title-container">
-        <h1>Invita. Me</h1>
-        <h2>Crea invitaciones a tu estilo.</h2>
-        <p>
+        </div>
+        <!-- Navbar **********************************************-->
+        <section class="container header__title-container">
+          <h1>Invita. Me</h1>
+          <h2>Crea invitaciones a <span>tu estilo.</span></h2>
+          <!-- <p>
+            Plasma tus ideas y personaliza tus invitaciones de una forma facil y
+            sencilla.
+          </p> -->
+          <div class="header__title-img">
+            <img src="./images/logo-invitame.svg" alt="logo" />
+          </div>
+        </section>
+      </header>
+    </div>
+    <main class="welcome__section-container container">
+      <div class="welcome__section container">
+        <h5>
           Plasma tus ideas y personaliza tus invitaciones de una forma facil y
           sencilla.
-        </p>
-        <div class="header__title-img">
-          <img src="./images/logo-invitame.svg" alt="logo" />
+        </h5>
+        <!-- <blockquote>
+          Plasma tus ideas y personaliza tus invitaciones de una forma facil y
+          sencilla.
+        </blockquote> -->
+        <div class="welcome__section-image">
+          <img src="./images/undraw_mello_otq1.svg" alt="undraw_mello_otq1" />
         </div>
-      </section>
-    </header>
+      </div>
+    </main>
     <script src="./js/main.js"></script>
   </body>
 </html>
