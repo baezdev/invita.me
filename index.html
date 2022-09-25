@@ -11,35 +11,132 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./src/css/normalize.css" />
-    <link rel="stylesheet" href="./src/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/index.css" />
     <title>Invita. Me</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="container navbar">
-        <div class="navbar__logo-container">
-          <img src="./public/logo.svg" alt="logo" />
+    <div class="page__complete">
+      <header class="header">
+        <!-- Navbar **********************************************-->
+        <div class="navbar__container">
+          <nav class="navbar container">
+            <div class="navbar__logo-container">
+              <img src="./images/logo.svg" alt="logo" />
+            </div>
+            <ul class="navbar__links-container">
+              <li>
+                <a class="navbar__links-link" href="index.html">Inicio</a>
+              </li>
+            </ul>
+            <ul class="navbar__session-container">
+              <li>
+                <a class="btn btn-primary" href="./pages/login.html">Acceder</a>
+                <button id="button__menu">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu__responsive-container hidden">
+            <ul class="menu__responsive">
+              <li>
+                <a class="navbar__links-link" href="index.html">Inicio</a>
+              </li>
+            </ul>
+            <a class="btn btn-secundary" href="./pages/login.html">Acceder</a>
+          </div>
         </div>
-        <ul class="navbar__links-container"></ul>
-        <ul class="navbar__session-container">
-          <li>
-            <a class="btn btn-primary" href="iniciar-sesion">Acceder</a>
-          </li>
-        </ul>
-      </nav>
-      <section class="container header__title-container">
-        <h1>Invita. Me</h1>
-        <h2>Crea invitaciones a tu estilo.</h2>
-        <p>
+        <!-- Navbar **********************************************-->
+        <section class="container header__title-container">
+          <h1>Invita. Me</h1>
+          <h2>Crea invitaciones a <span>tu estilo.</span></h2>
+          <!-- <p>
+            Plasma tus ideas y personaliza tus invitaciones de una forma facil y
+            sencilla.
+          </p> -->
+          <div class="header__title-img">
+            <img src="./images/logo-invitame.svg" alt="logo" />
+          </div>
+        </section>
+      </header>
+    </div>
+    <section class="welcome__section-container container margin__bottom">
+      <section class="welcome__section container">
+        <h5>
           Plasma tus ideas y personaliza tus invitaciones de una forma facil y
           sencilla.
-        </p>
-        <div class="header__title-img">
-          <img src="./public/logo-invitame.svg" alt="logo" />
+        </h5>
+        <div class="welcome__section-image">
+          <img src="./images/undraw_mello_otq1.svg" alt="undraw_mello_otq1" />
         </div>
       </section>
-    </header>
-    <script src="./src/js/main.js"></script>
+    </section>
+    <section class="info__service-container container margin__bottom">
+      <h4 class="subtitle">Aun no estas convencid@?</h4>
+      <div class="info__service">
+        <h5>La mejor opción para ti.</h5>
+        <div class="info__service-cards">
+          <div class="info__service-cardcontainer">
+            <div class="info__service-card">
+              <p class="icon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </p>
+              <p class="info__service-title">Digital</p>
+              <p class="info__service-text">
+                Tus invitados podrán acceder desde cualquier sitio
+              </p>
+            </div>
+          </div>
+          <div class="info__service-cardcontainer">
+            <div class="info__service-card">
+              <p class="icon">
+                <i class="fa-solid fa-pen-fancy"></i>
+              </p>
+              <p class="info__service-title">Diseño</p>
+              <p class="info__service-text">
+                No te gustan los diseño, danos tus ideas y crearemos tú
+                Invitación perfecta
+              </p>
+            </div>
+          </div>
+          <div class="info__service-cardcontainer">
+            <div class="info__service-card">
+              <p class="icon">
+                <i class="fa-solid fa-earth-americas"></i>
+              </p>
+              <p class="info__service-title">Ecológico</p>
+              <p class="info__service-text">
+                ¡Dile adiós al papel Cuidemos el planeta!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container margin__bottom">
+      <h4 class="subtitle">Para cualquier ocasión.</h4>
+      <div class="types__events-container">
+        <div class="types__events-image">
+          <img src="./images/undraw_online_wishes_dlmr.svg" alt="fiesta" />
+        </div>
+        <ul class="types__events-list">
+          <li>√ Bodas</li>
+          <li>√ Despedida de Solter@</li>
+          <li>√ XV Años</li>
+          <li>√ Baby Shower</li>
+          <li>√ Bautizo</li>
+          <li>√ Cumpleaños</li>
+        </ul>
+      </div>
+    </section>
+    <script src="./js/main.js"></script>
   </body>
 </html>
