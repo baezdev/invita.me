@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./public/logo.svg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <title>Invita. Me (Iniciar Sesión)</title>
+  </head>
+  <body class="bg-clip">
+    <main class="page__complete">
+      <!-- Navbar **********************************************-->
+      <div class="navbar__container">
+        <nav class="navbar container">
+          <div class="navbar__logo-container">
+            <img src="../images/logo.svg" alt="logo" />
+          </div>
+          <ul class="navbar__links-container">
+            <li>
+              <a class="navbar__links-link" href="../index.html">Inicio</a>
+            </li>
+          </ul>
+          <ul class="navbar__session-container">
+            <li>
+              <a
+                class="btn btn-primary none__opactity"
+                href="./pages/login.html"
+                >Acceder</a
+              >
+              <button id="button__menu">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu__responsive-container hidden">
+          <ul class="menu__responsive">
+            <li>
+              <a class="navbar__links-link" href="../index.html">Inicio</a>
+            </li>
+          </ul>
+          <a class="btn btn-secundary" href="./login.html">Acceder</a>
+        </div>
+      </div>
+      <!-- Navbar **********************************************-->
+      <div class="center__section h-with__nav container">
+        <section class="login__container">
+          <div class="login__title">
+            <h3>Contactanos</h3>
+            
+          </div>
+          <form class="login">
+            <div class="login__input-container">
+              <label for=""> Nombre: </label>
+              <div class="login__input">
+                <input
+                  placeholder="Nombre completo"
+                />
+              </div>
+            </div>
+            <div class="login__input-container">
+              <label for=""> Correo electronico o telefono: </label>
+              <div class="login__input">
+                <input
+                  placeholder="Como podemos contactarte"
+                />
+              </div>
+            </div>
+            <div class="login__input-container">
+              <label for="">Te gustaria un diseño personalizado? </label>
+              <div class="login__input">
+                <input
+                  placeholder="Agreganos las especificaciones"
+                />
+              </div>
+            </div>
+            <div class="button__container">
+              <button class="button button__gradient">Enviar</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
