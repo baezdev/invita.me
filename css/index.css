@@ -120,24 +120,43 @@ img {
 }
 
 .margin__bottom {
-  margin-bottom: 10rem;
+  margin-bottom: 6rem;
 }
 
 .subtitle {
-  font-size: 4.5rem;
+  font-size: 3rem;
   font-weight: 800;
   text-align: center;
   margin-top: 0;
 }
 
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 4.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .margin__bottom {
+    margin-bottom: 10rem;
+  }
+}
+
 /* Header */
 .header {
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   background-color: #b6e2d3;
   opacity: 1;
   background-image: radial-gradient(#d3ede4 2px, #b6e2d3 2px);
   background-size: 40px 40px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 70vh;
+  }
 }
 
 /* Navbar */
@@ -252,26 +271,46 @@ img {
 }
 
 .header__title-container h1 {
-  margin: 10rem 0 1rem 0;
-  font-size: 10rem;
+  margin: 3rem 0 1rem 0;
+  font-size: 5rem;
   text-align: center;
   font-weight: 900;
 }
 
 .header__title-container h2 {
-  font-size: 5rem;
+  font-size: 3rem;
   text-align: center;
   margin: 0;
   font-weight: 600;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .header__title-container span {
+  display: block;
   font-weight: 900;
   background-color: var(--darkGreen);
   padding: 1rem;
   color: var(--yellow);
   border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .header__title-container h1 {
+    margin: 7rem 0 1rem 0;
+    font-size: 10rem;
+  }
+
+  .header__title-container h2 {
+    font-size: 5rem;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .header__title-container span {
+    display: inline-block;
+  }
 }
 
 .header__title-container p {
@@ -287,8 +326,20 @@ img {
   margin: 0 auto;
   background: #fff;
   border-radius: 100%;
-  width: 45rem;
+  width: 20rem;
   position: relative;
+}
+
+@media (min-width: 1024px) {
+  .header__title-img {
+    width: 25rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .header__title-img {
+    width: 45rem;
+  }
 }
 
 .header__title-img img {
@@ -398,6 +449,7 @@ img {
 
 .welcome__section {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background: #fff;
@@ -407,18 +459,36 @@ img {
 }
 
 .welcome__section h5 {
-  font-size: 3rem;
+  font-size: 1.9rem;
   max-width: 600px;
   line-height: 1.5;
+  margin-top: 0;
 }
 
 .welcome__section-image {
-  width: 30rem;
+  width: 20rem;
+}
+
+@media (min-width: 768px) {
+  .welcome__section {
+    flex-direction: row;
+  }
+
+  .welcome__section h5 {
+    font-size: 3rem;
+    max-width: 600px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .welcome__section-image {
+    width: 30rem;
+  }
 }
 
 .info__service-container {
   background: #fff;
-  padding: 3rem;
+  padding: 1rem;
   border-radius: 6px;
 }
 
@@ -429,15 +499,15 @@ img {
 }
 
 .info__service h5 {
+  display: none;
   font-size: 3rem;
   margin-right: 6rem;
 }
 
 .info__service-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 5rem;
-  margin-left: 5rem;
 }
 
 .info__service-cardcontainer {
@@ -485,23 +555,66 @@ img {
 
 .types__events-container {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
-  gap: 9rem;
+  gap: 4rem;
 }
 
 .types__events-image {
-  width: 45rem;
+  width: 25rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .info__service h5 {
+    display: inline;
+    font-size: 3rem;
+    margin-right: 6rem;
+  }
+
+  .types__events-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 9rem;
+  }
+
+  .types__events-image {
+    width: 45rem;
+    margin: 0;
+  }
 }
 
 .types__events-list {
   list-style: none;
   font-size: 2.5rem;
   font-weight: 700;
+  padding: 0;
 }
 
 .types__events-list li {
   margin-bottom: 2.5rem;
   border-bottom: 3px solid var(--mint);
+}
+
+@media (min-width: 768px) {
+  .info__service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    margin-left: 5rem;
+  }
+
+  .info__service h5 {
+    font-size: 3rem;
+    margin-right: 6rem;
+  }
+
+  .info__service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 5rem;
+  }
 }
 
 /***********************************/
