@@ -11,12 +11,20 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/index.css" />
     <title>Invita. Me (Iniciar Sesión)</title>
   </head>
   <body class="bg-clip">
     <main class="page__complete">
+      <!-- Navbar **********************************************-->
       <div class="navbar__container">
         <nav class="navbar container">
           <div class="navbar__logo-container">
@@ -27,14 +35,30 @@
               <a class="navbar__links-link" href="../index.html">Inicio</a>
             </li>
           </ul>
-          <ul class="navbar__session-container none__opactity">
+          <ul class="navbar__session-container">
             <li>
-              <a class="btn btn-primary" href="./pages/login.html">Acceder</a>
+              <a
+                class="btn btn-primary none__opactity"
+                href="./pages/login.html"
+                >Acceder</a
+              >
+              <button id="button__menu">
+                <i class="fa-solid fa-bars"></i>
+              </button>
             </li>
           </ul>
         </nav>
+        <div class="menu__responsive-container hidden">
+          <ul class="menu__responsive">
+            <li>
+              <a class="navbar__links-link" href="../index.html">Inicio</a>
+            </li>
+          </ul>
+          <a class="btn btn-secundary" href="./login.html">Acceder</a>
+        </div>
       </div>
-      <div class="center__section h-with__nav">
+      <!-- Navbar **********************************************-->
+      <div class="center__section h-with__nav container">
         <section class="login__container">
           <div class="login__title">
             <h3>Iniciar Sesión</h3>

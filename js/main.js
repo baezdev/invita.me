@@ -1,7 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
 
-const navbarLinksContainer = $(".navbar__links-container");
-
 const links = [
   {
     text: "diseños",
@@ -22,9 +20,13 @@ const links = [
 ];
 
 const generateLinks = () => {
+  const navbarLinksContainer = $(".navbar__links-container");
+  const navbarLinksContainerResponsive = $(".menu__responsive");
+
   const location = window.location.pathname;
   const isPagesLocation = location.includes("pages");
 
+  /*   Genera los links de la navegacion  */
   links.map(({ text, href }) => {
     const li = document.createElement("li");
     li.innerHTML = `<a href=${
@@ -34,8 +36,33 @@ const generateLinks = () => {
 
     navbarLinksContainer.appendChild(li);
   });
+
+  /*   Genera los links de la navegacion del menu responsivo */
+  links.map(({ text, href }) => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href=${
+      isPagesLocation ? href : `pages/${href}`
+    }>${text}</a>`;
+    li.classList.add("navbar__links-link");
+
+    navbarLinksContainerResponsive.appendChild(li);
+  });
+};
+
+const toggleButtonMenu = () => {
+  const buttonMenu = $("#button__menu");
+  const menuResponsive = $(".menu__responsive-container");
+
+  buttonMenu.addEventListener("click", () => {
+    if (menuResponsive.classList.contains("hidden")) {
+      menuResponsive.classList.replace("hidden", "flex");
+    } else {
+      menuResponsive.classList.replace("flex", "hidden");
+    }
+  });
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   generateLinks();
+  toggleButtonMenu();
 });
