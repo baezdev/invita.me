@@ -150,6 +150,7 @@ img {
 }
 
 .navbar {
+  padding: 1.1rem 0;
   padding: 1.2rem 0;
   display: flex;
   justify-content: space-between;
@@ -286,7 +287,7 @@ img {
   margin: 0 auto;
   background: #fff;
   border-radius: 100%;
-  width: 25rem;
+  width: 45rem;
   position: relative;
 }
 
@@ -498,7 +499,7 @@ img {
   font-weight: 700;
 }
 
-.types__events-list li{
+.types__events-list li {
   margin-bottom: 2.5rem;
   border-bottom: 3px solid var(--mint);
 }
@@ -577,6 +578,10 @@ img {
   row-gap: 1rem;
 }
 
+.listaP {
+  row-gap: 1rem;
+}
+
 .caracP {
   display: flex;
   column-gap: 3rem;
@@ -642,4 +647,72 @@ img {
 
     row-gap: 100px;
   }
+}
+/*plantillas*/
+
+.container-element {
+  text-align: center;
+  align-items: center;
+  margin: 25px;
+  color: white;
+  width: 300px;
+  height: auto;
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 25px;
+  background-color: var(--green);
+  border-radius: 10px;
+}
+.image-catalog {
+  height: 200px;
+  padding: 5px;
+  align-items: center;
+}
+.partial-page {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+/*Estilos de la pagina quienes somos*/
+/**********************************/
+#quienesSomos {
+  text-align: center;
+}
+#info {
+  background: var(--mint);
+  padding: 20px;
+}
+
+#info .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.info-ma {
+  margin: 20px;
+}
+
+.info-ma img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 7px solid #000000;
+}
+
+@media (min-width: 480px) {
+  .info-ma {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .info-ma {
+    width: auto;
+  }
+}
+#personalizar {
+  text-align: center;
 }
