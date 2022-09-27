@@ -10,7 +10,7 @@ const links = [
     href: "services.html",
   },
   {
-    text: "¿Quiénes Somos?",
+    text: "sobre nosotros",
     href: "about.html",
   },
   {
