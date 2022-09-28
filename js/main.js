@@ -49,6 +49,7 @@ const generateLinks = () => {
   });
 };
 
+//Abrir y cerrar el menu responsivo
 const toggleButtonMenu = () => {
   const buttonMenu = $("#button__menu");
   const menuResponsive = $(".menu__responsive-container");
@@ -62,7 +63,25 @@ const toggleButtonMenu = () => {
   });
 };
 
+//Boton para ir hacia arriba
+const goUp = () => {
+  const buttonArrow = $(".button__top");
+  //Ya que esta funcion se ejecuta cuando se carga el documento, el boton se ocultara al cargar la pagina
+  buttonArrow.style = `display:none`;
+
+  window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop === 0) {
+      buttonArrow.style = `display:none`;
+    } else {
+      buttonArrow.style = `display:block`;
+    }
+  });
+
+  buttonArrow.addEventListener("click", () => scroll(0, 0));
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   generateLinks();
   toggleButtonMenu();
+  goUp();
 });
