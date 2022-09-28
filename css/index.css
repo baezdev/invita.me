@@ -9,11 +9,9 @@
 
 * {
   box-sizing: border-box;
-}
-
-* {
   scrollbar-width: thin;
   scrollbar-color: var(--yellow);
+  scroll-behavior: smooth;
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -37,6 +35,7 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   font-size: 1.6rem;
+  position: relative;
 }
 
 img {
@@ -149,6 +148,10 @@ img {
   margin-bottom: 6rem;
 }
 
+.margin__bottom-sm {
+  margin-bottom: 2rem;
+}
+
 .subtitle {
   font-size: 3rem;
   font-weight: 800;
@@ -158,6 +161,20 @@ img {
 
 .text__md {
   font-size: 2.3rem;
+}
+
+.button__top {
+  position: fixed;
+  border: 3px solid var(--mint);
+  padding: 1rem 1.3rem;
+  font-size: 2.5rem;
+  right: 1.5rem;
+  bottom: 50px;
+  background: var(--darkGreen);
+  border-radius: 8px;
+  color: var(--yellow);
+  animation: up-and-down 1s infinite;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -174,6 +191,10 @@ img {
 
   .text__md {
     font-size: 3.5rem;
+  }
+
+  .button__top {
+    right: 3rem;
   }
 }
 
@@ -204,11 +225,11 @@ img {
 
 .navbar {
   padding: 1.1rem 0;
-  padding: 1.2rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  height: fit-content;
 }
 
 .navbar__logo-container {
@@ -216,7 +237,9 @@ img {
 }
 
 .navbar__logo-container img {
-  width: 80%;
+  width: 65%;
+  background: #fff;
+  border-radius: 10px;
 }
 
 .navbar__links-container,
@@ -270,8 +293,6 @@ img {
   background-image: radial-gradient(#d3ede4 2px, #b6e2d3 2px);
   background-size: 40px 40px;
   box-shadow: 0px 5px 15px -7px rgba(0, 0, 0, 0.1);
-
-  /* border-bottom: 3px solid var(--yellow); */
 }
 
 .menu__responsive-container .menu__responsive {
@@ -512,6 +533,7 @@ img {
 
 .welcome__section-image {
   width: 20rem;
+  animation: up-and-down 1s infinite;
 }
 
 @media (min-width: 768px) {
@@ -584,6 +606,11 @@ img {
   border-radius: 8px;
 }
 
+.info__service-card:hover .icon {
+  transition: all 0.3s ease-in-out;
+  animation: earthquake 0.8s;
+}
+
 .info__service-title {
   font-size: 2.5rem;
   margin: 4rem 0 0 0;
@@ -610,6 +637,7 @@ img {
 .types__events-image {
   width: 25rem;
   margin: 0 auto;
+  animation: up-and-down 1s infinite;
 }
 
 @media (min-width: 768px) {
@@ -694,6 +722,11 @@ img {
 .content__invitation-icon {
   font-size: 4rem;
   color: var(--yellow);
+  transition: all 0.3s ease-in-out;
+}
+
+.content__invitation-card:hover .content__invitation-icon i {
+  animation: earthquake 0.8s;
 }
 
 .content__invitation-title {
@@ -795,31 +828,37 @@ img {
 
 .footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .footer span {
+  display: block;
   font-weight: 700;
   font-size: 2rem;
 }
 
 .footer img {
   width: 10rem;
+  background: #fff;
+  border-radius: 10px;
 }
 
 .footer__input {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  width: fit-content;
+  margin: 0;
 }
 
 @media (min-width: 768px) {
-  .footer__input {
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-start;
+  .footer {
+    justify-content: space-between;
+    flex-direction: row;
   }
 }
 
@@ -874,6 +913,7 @@ img {
 .contenedorP {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 3rem;
 }
 
 .tarjetaP,
@@ -977,7 +1017,7 @@ img {
 
   .contenedorP {
     display: grid;
-    row-gap: 100px;
+    row-gap: 2rem;
     justify-content: center;
   }
 
@@ -1109,6 +1149,7 @@ img {
 
 .about__seccion-image {
   width: 20rem;
+  animation: up-and-down 1s infinite;
 }
 
 .separator {
@@ -1148,5 +1189,30 @@ img {
 
   .direction__reverse {
     flex-direction: row-reverse;
+  }
+}
+
+/* Animaciones */
+@keyframes earthquake {
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes up-and-down {
+  50% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
   }
 }
