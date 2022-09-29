@@ -925,8 +925,10 @@ img {
 .tarjetaP {
   width: 450px;
   row-gap: 2rem;
-  background-color: var(--black);
-  padding: 2rem 2.5rem;
+  background-color: var(--darkGreen);
+  border: 8px solid var(--mint);
+  border-radius: 2rem;
+  padding: 3rem;
 }
 
 .imgP {
@@ -939,6 +941,8 @@ img {
   border-radius: 50%;
   place-items: center;
   margin-bottom: 1rem;
+  background-color: var(--mint);
+
 }
 
 .tituloP {
@@ -950,6 +954,8 @@ img {
 .costo {
   font-size: 3.5rem;
   margin-bottom: 0;
+  color: whitesmoke;
+
 }
 
 .listaP {
@@ -963,14 +969,12 @@ img {
   column-gap: 3rem;
   align-items: center;
   font-size: 2rem;
+  color: whitesmoke;
 }
 
 .caracP i {
   font-size: 3rem;
-}
-
-.caracP-opacity {
-  opacity: 3;
+  color: var(--yellow);
 }
 
 .botonP {
@@ -982,27 +986,7 @@ img {
 
 .botonP:hover {
   background-color: var(--green);
-}
-
-.tarjetaP-active {
-  background-color: var(--darkGreen);
-  border: 8px solid var(--mint);
-  border-radius: 2rem;
-  padding: 3rem;
-}
-
-.tarjetaP-active .formaP {
-  background-color: var(--mint);
-}
-
-.tarjetaP-active .caracP i {
   color: var(--yellow);
-}
-
-.tarjetaP-active .tituloP,
-.tarjetaP-active .costo,
-.tarjetaP-active .caracP {
-  color: whitesmoke;
 }
 
 @media (max-width: 768px) {
@@ -1047,6 +1031,12 @@ img {
 
   .botonP {
     font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 1134px) {
+  #intro h2{
+    font-size: 2.75rem;
   }
 }
 /*plantillas*/
