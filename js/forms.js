@@ -1,8 +1,8 @@
-const btnEye = document.querySelector(".show__pass");
+const btnShowPass = document.querySelector(".show__pass");
 const passwordInput = document.querySelector("[name=password]");
 
 const showPassword = () => {
-  btnEye.addEventListener("click", () => {
+  btnShowPass.addEventListener("click", () => {
     passwordInput.type =
       passwordInput.type === "password" ? "text" : "password";
   });
