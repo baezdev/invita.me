@@ -143,7 +143,8 @@ img {
 }
 
 #button__menu {
-  background: var(--yellow);
+  background: var(--darkGreen);
+  color: var(--mint);
   padding: 1rem;
   border: none;
   font-size: 2.5rem;
@@ -263,8 +264,9 @@ img {
   height: 100vh;
   position: absolute;
   top: 0;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   transform: translate(100%);
+  opacity: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -281,12 +283,12 @@ img {
 
 .showMenu {
   transform: translate(0);
+  opacity: 1;
 }
 
 .button__menu {
   border: none;
   font-size: 2.5rem;
-  background: transparent;
   cursor: pointer;
   position: relative;
   width: 37px;
@@ -295,8 +297,8 @@ img {
   align-items: center;
   justify-content: center;
   z-index: 99;
-  color: var(--secondary);
-  background-color: var(--yellow);
+  color: var(--mint);
+  background-color: var(--darkGreen);
   border-radius: 6px;
 }
 
@@ -375,7 +377,8 @@ img {
   width: 15%;
 }
 
-/* Header */
+/***** Header *****/
+
 .header {
   position: relative;
   top: 8.4rem;
@@ -465,7 +468,7 @@ img {
 
 @media (min-width: 1024px) {
   .header__title-img {
-    width: 45rem;
+    width: 40rem;
   }
 }
 
@@ -504,8 +507,14 @@ img {
   justify-content: center;
 }
 
-.form {
+.login__container {
   width: 30%;
+}
+
+/***** Forms *****/
+
+.form {
+  width: 100%;
   padding: 5rem 3rem;
   background: var(--white);
   border-radius: 3.8rem;
@@ -541,7 +550,7 @@ img {
   width: 13rem;
 }
 
-.form__header a {
+.form__header span a {
   text-decoration: none;
   border-bottom: 3px solid var(--mint);
   color: var(--darkGreen);
@@ -579,7 +588,8 @@ img {
   width: 100%;
 }
 
-.form__input input::placeholder {
+.form__input input::placeholder,
+.form__textarea::placeholder {
   color: var(--gray);
 }
 
@@ -587,8 +597,19 @@ img {
   outline: none;
 }
 
-.form__input:focus-within {
+.form__input:focus-within,
+.form__textarea:focus {
   border-bottom: 1px solid var(--mint);
+  outline: none;
+}
+
+.form__textarea {
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  resize: none;
+  border-bottom: 1px solid var(--gray);
 }
 
 .form__button {
@@ -734,7 +755,9 @@ img {
   font-size: 4rem;
   margin: 0 auto;
   display: inline-block;
-  border-radius: 8px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  text-align: center;
 }
 
 .info__service-card:hover .icon {
@@ -761,7 +784,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
   background: linear-gradient(90rad, var(--mint), var(--yellow));
 }
 
@@ -808,17 +830,12 @@ img {
   font-size: 2.2rem;
   font-weight: 600;
   text-transform: capitalize;
-  border-radius: 0.6rem;
+  border-radius: 1rem;
 }
 
 .types__event:hover::after {
   opacity: 1;
 }
-/* .types__events-image {
-  width: 25rem;
-  margin: 0 auto;
-  animation: up-and-down 1s infinite;
-} */
 
 @media (min-width: 768px) {
   .info__service h5 {
@@ -826,18 +843,6 @@ img {
     font-size: 3rem;
     margin-right: 6rem;
   }
-
-  /* .types__events-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 9rem;
-  }
-
-  .types__events-image {
-    width: 45rem;
-    margin: 0;
-  } */
 }
 
 .types__events-list {
@@ -920,12 +925,6 @@ img {
   font-weight: 600;
   font-size: 1.8rem;
 }
-
-/* .buttons__container {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-} */
 
 .buttons__container {
   display: flex;
@@ -1311,7 +1310,20 @@ img {
   }
 }
 
-/* Animaciones */
+/***** Contacto *****/
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact__container {
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+/***** Animaciones *****/
 @keyframes earthquake {
   25% {
     transform: rotate(-20deg);

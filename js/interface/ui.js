@@ -37,7 +37,11 @@ export const createTypesEvents = () => {
 
   events.map(({ img, name }) => {
     const imgDiv = document.createElement("div");
-    imgDiv.style = `background: url(${img})`;
+    imgDiv.style = /* css */ `background: url(${img});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;`;
+
     imgDiv.classList.add("types__event");
     imgDiv.setAttribute("text", name);
     eventsContainer.appendChild(imgDiv);

@@ -15,42 +15,46 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../css/normalize.css" />
   <link rel="stylesheet" href="../css/index.css" />
-  <title>Invita. Me (Registrate)</title>
+  <title>Invit♥Arte (Registrate)</title>
 </head>
 
 <body>
   <main class="page__complete">
     <section class="login">
-      <div class="form">
-        <div class="form__header">
-          <img src="../images/logo.svg" alt="Logo Invit-Arte">
-          <span>¿Ya tienes cuenta? <a href="./login.html">Accede</a></span>
+      <div class="login__container">
+        <div class="form">
+          <div class="form__header">
+            <a href="../index.html">
+              <img src="../images/logo.svg" alt="Logo Invit-Arte">
+            </a>
+            <span>¿Ya tienes cuenta? <a href="./login.html">Accede</a></span>
+          </div>
+          <h1>Registrarse</h1>
+          <p>Crea invitaciones a tu estilo.</p>
+          <form class="form__inputs margin__top-md">
+            <div class="form__input margin__bottom-md">
+              <span><i class="fa-solid fa-user"></i></span>
+              <input type="text" name="name" placeholder="Nombre">
+              <span><i class="fa-regular fa-circle-check"></i></span>
+            </div>
+            <div class="form__input margin__bottom-md">
+              <span><i class="fa-solid fa-envelope"></i></span>
+              <input type="email" name="email" placeholder="Correo Electrónico">
+              <span><i class="fa-regular fa-circle-check"></i></span>
+            </div>
+            <div class="form__input margin__bottom-lg">
+              <span><i class="fa-solid fa-lock"></i></span>
+              <input type="password" name="password" placeholder="Contraseña">
+              <button class="show__pass" id="btn__eye" type="button"><i class="fa-regular fa-eye"></i></button>
+            </div>
+            <div class="form__buttons">
+              <button class="form__button form__button-primary">
+                <span class="form__button-text">Registrarse</span>
+                <span class="form__button-icon"><i class="fa-solid fa-arrow-right"></i></span>
+              </button>
+            </div>
+          </form>
         </div>
-        <h1>Registrarse</h1>
-        <p>Crea invitaciones a tu estilo.</p>
-        <form class="form__inputs margin__top-md">
-          <div class="form__input margin__bottom-md">
-            <span><i class="fa-solid fa-user"></i></span>
-            <input type="text" name="name" placeholder="Nombre">
-            <span><i class="fa-regular fa-circle-check"></i></span>
-          </div>
-          <div class="form__input margin__bottom-md">
-            <span><i class="fa-solid fa-envelope"></i></span>
-            <input type="email" name="email" placeholder="Correo Electrónico">
-            <span><i class="fa-regular fa-circle-check"></i></span>
-          </div>
-          <div class="form__input margin__bottom-lg">
-            <span><i class="fa-solid fa-lock"></i></span>
-            <input type="password" name="password" placeholder="Contraseña">
-            <button class="show__pass" id="btn__eye" type="button"><i class="fa-regular fa-eye"></i></button>
-          </div>
-          <div class="form__buttons">
-            <button class="form__button form__button-primary">
-              <span class="form__button-text">Registrarse</span>
-              <span class="form__button-icon"><i class="fa-solid fa-arrow-right"></i></span>
-            </button>
-          </div>
-        </form>
       </div>
     </section>
   </main>
