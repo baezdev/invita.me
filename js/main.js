@@ -1,5 +1,5 @@
-import { showMenu, generateLinks } from "./navbar.js";
-import { createTypesEvents, goUp } from "./ui.js";
+import { showMenu, generateLinks } from "./interface/navbar.js";
+import { createTypesEvents, goUp } from "./interface/ui.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   showMenu();
