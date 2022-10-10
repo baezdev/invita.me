@@ -143,7 +143,8 @@ img {
 }
 
 #button__menu {
-  background: var(--yellow);
+  background: var(--darkGreen);
+  color: var(--mint);
   padding: 1rem;
   border: none;
   font-size: 2.5rem;
@@ -263,8 +264,9 @@ img {
   height: 100vh;
   position: absolute;
   top: 0;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   transform: translate(100%);
+  opacity: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -281,12 +283,12 @@ img {
 
 .showMenu {
   transform: translate(0);
+  opacity: 1;
 }
 
 .button__menu {
   border: none;
   font-size: 2.5rem;
-  background: transparent;
   cursor: pointer;
   position: relative;
   width: 37px;
@@ -295,8 +297,8 @@ img {
   align-items: center;
   justify-content: center;
   z-index: 99;
-  color: var(--secondary);
-  background-color: var(--yellow);
+  color: var(--mint);
+  background-color: var(--darkGreen);
   border-radius: 6px;
 }
 
@@ -465,7 +467,7 @@ img {
 
 @media (min-width: 1024px) {
   .header__title-img {
-    width: 45rem;
+    width: 40rem;
   }
 }
 
@@ -541,7 +543,7 @@ img {
   width: 13rem;
 }
 
-.form__header a {
+.form__header span a {
   text-decoration: none;
   border-bottom: 3px solid var(--mint);
   color: var(--darkGreen);
@@ -734,7 +736,9 @@ img {
   font-size: 4rem;
   margin: 0 auto;
   display: inline-block;
-  border-radius: 8px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  text-align: center;
 }
 
 .info__service-card:hover .icon {
@@ -761,7 +765,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
   background: linear-gradient(90rad, var(--mint), var(--yellow));
 }
 
@@ -808,17 +811,12 @@ img {
   font-size: 2.2rem;
   font-weight: 600;
   text-transform: capitalize;
-  border-radius: 0.6rem;
+  border-radius: 1rem;
 }
 
 .types__event:hover::after {
   opacity: 1;
 }
-/* .types__events-image {
-  width: 25rem;
-  margin: 0 auto;
-  animation: up-and-down 1s infinite;
-} */
 
 @media (min-width: 768px) {
   .info__service h5 {
