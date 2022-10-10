@@ -19,8 +19,8 @@
   <title>Invit♥Arte (Contacto)</title>
 </head>
 
-<body class="bg-clip">
-  <main class="page__complete">
+<body>
+  <header class="cabecera">
     <!-- Navbar **********************************************-->
     <nav class="navbar">
       <a href="../index.html" class="navbar__logo">
@@ -39,36 +39,39 @@
       </div>
     </nav>
     <!-- Navbar **********************************************-->
-    <div class="center__section h-with__nav container">
-      <section class="login__container">
-        <div class="login__title">
-          <h3>Contactanos</h3>
+    <section class="container header__title-container">
+      <div id="intro">
+        <h2>Contáctanos</h2>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="contact container">
+      <div class="contact__container">
+        <div class="form">
+          <h1>Por correo</h1>
+          <p>Le contestaremos lo antes posible.</p>
+          <form class="form__inputs margin__top-md">
+            <div class="form__input margin__bottom-md">
+              <span><i class="fa-solid fa-user"></i></span>
+              <input type="text" name="name" placeholder="Nombre">
+            </div>
+            <div class="form__input margin__bottom-md">
+              <span><i class="fa-solid fa-envelope"></i></span>
+              <input type="email" name="email" placeholder="Correo Electrónico">
+            </div>
+            <textarea class="form__textarea margin__bottom-lg" name="message" id="" rows="7" placeholder="Mensaje"></textarea>
+            <div class="form__buttons">
+              <button class="form__button form__button-primary">
+                <span class="form__button-text">Enviar</span>
+                <span class="form__button-icon"><i class="fa-solid fa-paper-plane"></i></span>
+              </button>
+            </div>
+          </form>
         </div>
-        <form class="login">
-          <div class="login__input-container">
-            <label for=""> Nombre: </label>
-            <div class="login__input">
-              <input placeholder="Nombre completo" />
-            </div>
-          </div>
-          <div class="login__input-container">
-            <label for=""> Correo electronico o telefono: </label>
-            <div class="login__input">
-              <input placeholder="Como podemos contactarte" />
-            </div>
-          </div>
-          <div class="login__input-container">
-            <label for="">Te gustaria un diseño personalizado? </label>
-            <div class="login__input">
-              <input placeholder="Agreganos las especificaciones" />
-            </div>
-          </div>
-          <div class="button__container">
-            <button class="button button__gradient">Enviar</button>
-          </div>
-        </form>
-      </section>
-    </div>
+      </div>
+      <div class="contact__container">s</div>
+    </section>
   </main>
   <footer class="footer">
     <div class="separator"></div>
