@@ -514,7 +514,7 @@ img {
 }
 
 .login__container {
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -528,9 +528,15 @@ img {
 
 .form {
   width: 100%;
-  padding: 5rem 3rem;
+  padding: 2rem;
   background: var(--white);
   border-radius: 3.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    padding: 5rem 3rem;
+  }
 }
 
 .form h1 {
@@ -1095,7 +1101,7 @@ img {
 .contenedorP {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 3rem;
+  margin: 5rem auto;
 }
 
 .tarjetaP,
@@ -1137,9 +1143,8 @@ img {
   background-color: var(--mint);
 }
 
-.formaP:hover{
+.formaP:hover {
   animation: earthquake 0.8s;
-
 }
 
 .formaP i {
@@ -1249,7 +1254,7 @@ img {
   transition: all 0.3s ease-in-out;
 }
 
-.plantilla:hover{
+.plantilla:hover {
   transform: translateY(-1.5rem);
 }
 
@@ -1262,7 +1267,7 @@ img {
 
 .imagen-light {
   position: fixed;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
   top: 0;
@@ -1271,8 +1276,7 @@ img {
   justify-content: center;
   align-items: center;
   transform: translate(100%);
-  transition: transform .2s ease-in-out;
-
+  transition: transform 0.2s ease-in-out;
 }
 
 .show {
@@ -1285,7 +1289,7 @@ img {
   height: 60%;
   margin-top: 10px;
   border-radius: 10px;
-  transition: transform .3s .2s;
+  transition: transform 0.3s 0.2s;
   transform: scale(0);
 }
 
@@ -1305,15 +1309,15 @@ img {
 }
 
 @media (max-width: 768px) {
-  .tarjetaS{
+  .tarjetaS {
     height: 400px;
   }
 
-  .plantilla{
+  .plantilla {
     height: auto;
   }
 
-  .agregarImg{
+  .agregarImg {
     width: 90%;
     height: auto;
   }
@@ -1400,6 +1404,7 @@ img {
   align-items: center;
   justify-content: space-between;
   margin: 2.5rem auto;
+  gap: 3rem;
 }
 
 @media screen and (min-width: 768px) {
