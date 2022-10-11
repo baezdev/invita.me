@@ -889,6 +889,7 @@ img {
     gap: 2rem;
   }
 }
+
 @media (min-width: 1024px) {
   .content__invitation-container {
     display: grid;
@@ -1075,8 +1076,9 @@ img {
   background-size: 40px 40px;
 }
 
-.title__page h2 {
+#intro h2 {
   font-weight: 800;
+  margin-top: 35px;
 }
 
 .contenedor {
@@ -1084,7 +1086,7 @@ img {
   margin-left: 1.5rem;
 }
 
-.sPrecios {
+.sTarjetas {
   padding: 4.5rem 0 2rem;
 }
 
@@ -1100,17 +1102,28 @@ img {
   display: grid;
 }
 
-.tarjetaP {
-  width: 450px;
-  row-gap: 2rem;
-  background-color: var(--darkGreen);
-  border: 8px solid var(--mint);
-  border-radius: 2rem;
-  padding: 3rem;
+.formaP,
+.tituloP,
+.costo {
+  margin: 0px auto;
+  text-align: center;
 }
 
-.imgP {
-  width: 35px;
+.fondo {
+  padding: 0.5rem;
+  background: linear-gradient(90rad, var(--mint), var(--yellow));
+  border-radius: 10px;
+}
+
+.tarjetaP {
+  width: 450px;
+  height: 492px;
+  row-gap: 2rem;
+  background-color: var(--darkGreen);
+  /* border: 7px solid;
+  border-image: linear-gradient(to right, var(--mint), var(--yellow)) 1; */
+  border-radius: 10px;
+  padding: 3rem;
 }
 
 .formaP {
@@ -1120,6 +1133,15 @@ img {
   place-items: center;
   margin-bottom: 1rem;
   background-color: var(--mint);
+}
+
+.formaP:hover{
+  animation: earthquake 0.8s;
+
+}
+
+.formaP i {
+  font-size: 30px;
 }
 
 .tituloP {
@@ -1158,6 +1180,9 @@ img {
   color: #000;
   text-decoration: none;
   width: fit-content;
+  height: fit-content;
+  margin: 0px auto;
+  margin-bottom: 0%;
 }
 
 .botonP:hover {
@@ -1166,13 +1191,12 @@ img {
 }
 
 @media (max-width: 768px) {
-  #intro,
-  #intro h2 {
+  #intro {
     font-size: 2.5rem;
     width: 96%;
     transform: none;
     left: auto;
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .contenedorP {
@@ -1210,36 +1234,88 @@ img {
   }
 }
 
-@media (max-width: 1134px) {
-  #intro h2 {
-    font-size: 2.75rem;
-  }
-}
 /*plantillas*/
 
-.container-element {
-  text-align: center;
-  align-items: center;
-  margin: 25px;
-  color: white;
-  width: 300px;
-  height: auto;
-  padding-top: 25px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 25px;
-  background-color: var(--green);
+.tarjetaS {
+  height: 500px;
+}
+
+.plantilla {
   border-radius: 10px;
+  border: 3px solid var(--mint);
+  cursor: pointer;
+  height: 262px;
+  transition: all 0.3s ease-in-out;
 }
-.image-catalog {
-  height: 200px;
-  padding: 5px;
-  align-items: center;
+
+.plantilla:hover{
+  transform: translateY(-1.5rem);
 }
-.partial-page {
+
+.contPlantillas {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 15px;
+}
+
+.imagen-light {
+  position: fixed;
+  background: rgba(0, 0, 0, .5);
   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  transform: translate(100%);
+  transition: transform .2s ease-in-out;
+
+}
+
+.show {
+  transform: translate(0);
+}
+
+.agregarImg {
+  object-fit: cover;
+  width: 50%;
+  height: 60%;
+  margin-top: 10px;
+  border-radius: 10px;
+  transition: transform .3s .2s;
+  transform: scale(0);
+}
+
+.close {
+  background: linear-gradient(90rad, var(--mint), var(--yellow));
+  border-radius: 10px;
+  position: absolute;
+  top: 90px;
+  right: 15px;
+  width: 40px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.showImage {
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .tarjetaS{
+    height: 400px;
+  }
+
+  .plantilla{
+    height: auto;
+  }
+
+  .agregarImg{
+    width: 90%;
+    height: auto;
+  }
 }
 
 /***** Sobre Nosotros *****/
@@ -1334,12 +1410,15 @@ img {
   25% {
     transform: rotate(-20deg);
   }
+
   50% {
     transform: rotate(20deg);
   }
+
   75% {
     transform: rotate(-20deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
@@ -1349,6 +1428,7 @@ img {
   50% {
     transform: translateY(-10px);
   }
+
   50% {
     transform: translateY(10px);
   }
