@@ -54,7 +54,7 @@ export const generateLinks = () => {
   /* Agregar el index */
   const li = document.createElement("li");
   const a = document.createElement("a");
-  a.href = "/index.html";
+  a.href = isPage ? "../index.html" : "./index.html";
   a.textContent = "inicio";
   li.appendChild(a);
   navbarMenuContainer.appendChild(li);
