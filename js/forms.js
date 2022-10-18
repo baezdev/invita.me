@@ -11,3 +11,17 @@ const showPassword = () => {
 document.addEventListener("DOMContentLoaded", () => {
   showPassword();
 });
+
+const form = document.querySelector("form");
+const formInputs = document.querySelectorAll(".form__input-container");
+console.log(formInputs);
+
+const validarCampo = (e) => {
+  console.log("cambio");
+};
+
+formInputs.forEach((input) => {
+  /* input.addEventListener("blur", validarCampo);
+  input.addEventListener("keyup", validarCampo); */
+  console.log(input);
+});
