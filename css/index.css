@@ -22,7 +22,7 @@
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 /* *::-webkit-scrollbar-track {
@@ -1255,7 +1255,7 @@ img {
 }
 
 .plantilla:hover {
-  transform: translateY(-1.5rem);
+  transform: translateY(-.8rem);
 }
 
 .contPlantillas {
