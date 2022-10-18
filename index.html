@@ -1,88 +1,229 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./public/logo.svg" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <title>Invita. Me</title>
-  </head>
-  <body>
-    <div class="page__complete">
-      <header class="header">
-        <!-- Navbar **********************************************-->
-        <div class="navbar__container">
-          <nav class="navbar container">
-            <div class="navbar__logo-container">
-              <img src="./images/logo.svg" alt="logo" />
-            </div>
-            <ul class="navbar__links-container">
-              <li>
-                <a class="navbar__links-link" href="index.html">Inicio</a>
-              </li>
-            </ul>
-            <ul class="navbar__session-container">
-              <li>
-                <a class="btn btn-primary" href="./pages/login.html">Acceder</a>
-                <button id="button__menu">
-                  <i class="fa-solid fa-bars"></i>
-                </button>
-              </li>
-            </ul>
-          </nav>
-          <div class="menu__responsive-container hidden">
-            <ul class="menu__responsive">
-              <li>
-                <a class="navbar__links-link" href="index.html">Inicio</a>
-              </li>
-            </ul>
-            <a class="btn btn-secundary" href="./pages/login.html">Acceder</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <title>Invit♥Arte</title>
+</head>
+
+<body>
+  <div class="page__complete">
+    <header class="header h-with__nav">
+      <!-- Navbar **********************************************-->
+      <nav class="navbar">
+        <a href="./index.html" class="navbar__logo">
+          <img src="./images/logo.svg" alt="Logo Invit-Arte" />
+        </a>
+        <button class="button__menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+        <div class="navbar__menu">
+          <ul class="navbar__menu-container">
+            <li class="navbar__menu-search">
+              <input type="search" placeholder="Buscar en Invit-Arte" />
+              <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Navbar **********************************************-->
+      <section class="container header__title-container">
+        <h1>Invit♥Arte</h1>
+        <h2>Crea invitaciones a <span>tu estilo.</span></h2>
+        <div class="header__title-img">
+          <img src="./images/logo.svg" alt="logo" />
+        </div>
+      </section>
+    </header>
+  </div>
+  <section class="welcome__section-container container margin__bottom">
+    <section class="welcome__section container">
+      <h5>
+        Plasma tus ideas y personaliza tus invitaciones de una forma facil y
+        sencilla.
+      </h5>
+      <div class="welcome__section-image">
+        <img src="./images/undraw_mello_otq1.svg" alt="undraw_mello_otq1" />
+      </div>
+    </section>
+  </section>
+  <section class="info__service-container container margin__bottom">
+    <h4 class="subtitle">La mejor opción para ti.</h4>
+    <div class="info__service">
+      <div class="info__service-cards">
+        <div class="info__service-cardcontainer">
+          <div class="info__service-card">
+            <p class="icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </p>
+            <p class="info__service-title">Digital</p>
+            <p class="info__service-text">
+              Accede a tus diseños desde cualquier dispositivo electrónico.
+            </p>
           </div>
         </div>
-        <!-- Navbar **********************************************-->
-        <section class="container header__title-container">
-          <h1>Invita. Me</h1>
-          <h2>Crea invitaciones a <span>tu estilo.</span></h2>
-          <!-- <p>
-            Plasma tus ideas y personaliza tus invitaciones de una forma facil y
-            sencilla.
-          </p> -->
-          <div class="header__title-img">
-            <img src="./images/logo-invitame.svg" alt="logo" />
+        <div class="info__service-cardcontainer">
+          <div class="info__service-card">
+            <p class="icon">
+              <i class="fa-solid fa-pen-fancy"></i>
+            </p>
+            <p class="info__service-title">Diseño</p>
+            <p class="info__service-text">
+              Crea tu propio diseño, envíanos tus ideas y nosotros nos
+              encargamos de hacerlas realidad.
+            </p>
           </div>
-        </section>
-      </header>
-    </div>
-    <main class="welcome__section-container container">
-      <div class="welcome__section container">
-        <h5>
-          Plasma tus ideas y personaliza tus invitaciones de una forma facil y
-          sencilla.
-        </h5>
-        <!-- <blockquote>
-          Plasma tus ideas y personaliza tus invitaciones de una forma facil y
-          sencilla.
-        </blockquote> -->
-        <div class="welcome__section-image">
-          <img src="./images/undraw_mello_otq1.svg" alt="undraw_mello_otq1" />
+        </div>
+        <div class="info__service-cardcontainer">
+          <div class="info__service-card">
+            <p class="icon">
+              <i class="fa-solid fa-earth-americas"></i>
+            </p>
+            <p class="info__service-title">Ecológico</p>
+            <p class="info__service-text">
+              Vive una nueva experiencia, cuidando nuestro planeta ¡Dile adiós
+              al papel!
+            </p>
+          </div>
         </div>
       </div>
-    </main>
-    <script src="./js/main.js"></script>
-  </body>
+    </div>
+  </section>
+  <section class="margin__bottom">
+    <h4 class="subtitle">Para cualquier ocasión.</h4>
+    <div class="types__events-container"></div>
+  </section>
+  <section class="container margin__bottom">
+    <h4 class="subtitle">¡Tu invitación puede tener todo esto!</h4>
+    <div class="content__invitation-container">
+      <div class="content__invitation">
+        <div class="content__invitation-card">
+          <span class="content__invitation-icon"><i class="fa-solid fa-clock"></i></span>
+          <p class="content__invitation-title">Contador</p>
+          <p class="content__invitation-text">
+            Permite que tus invitados estén notificados de los días que falten
+            para el evento.
+          </p>
+        </div>
+      </div>
+      <div class="content__invitation">
+        <div class="content__invitation-card">
+          <span class="content__invitation-icon"><i class="fa-solid fa-photo-film"></i></span>
+          <p class="content__invitation-title">Galeria de Fotos</p>
+          <p class="content__invitation-text">
+            Crea un carrete personalizado con fotos y recuerdos para compartir
+            con tus invitados.
+          </p>
+        </div>
+      </div>
+      <div class="content__invitation">
+        <div class="content__invitation-card">
+          <span class="content__invitation-icon"><i class="fa-solid fa-gift"></i></span>
+          <p class="content__invitation-title">Mesa de Regalos</p>
+          <p class="content__invitation-text">
+            Ayuda a tus invitados, comparte con ellos ideas de lo que podrían
+            obsequiarte.
+          </p>
+        </div>
+      </div>
+      <div class="content__invitation">
+        <div class="content__invitation-card">
+          <span class="content__invitation-icon"><i class="fa-solid fa-map"></i></span>
+          <p class="content__invitation-title">Ubicación</p>
+          <p class="content__invitation-text">
+            Que nadie falte, comparte la ubicación exacta del evento.
+          </p>
+        </div>
+      </div>
+      <div class="content__invitation">
+        <div class="content__invitation-card">
+          <span class="content__invitation-icon"><i class="fa-solid fa-user-check"></i></span>
+          <p class="content__invitation-title">Asistencia</p>
+          <p class="content__invitation-text">
+            Crea una lista de tus invitados y permite que confirmen su
+            asistencia.
+          </p>
+        </div>
+      </div>
+      <div class="content__invitation">
+        <div class="content__invitation-card">
+          <span class="content__invitation-icon"><i class="fa-solid fa-shirt"></i></span>
+          <p class="content__invitation-title">Vestimenta</p>
+          <p class="content__invitation-text">
+            Notifica a tus invitados si elegiste alguna temática para tu
+            evento.
+          </p>
+        </div>
+      </div>
+      <div class="content__invitation">
+        <div class="content__invitation-card">
+          <span class="content__invitation-icon"><i class="fa-solid fa-user-secret"></i></span>
+          <p class="content__invitation-title">Padrinos</p>
+          <p class="content__invitation-text">
+            Crea una forma especial de pedirles a esas personas especiales que
+            formen parte de tu evento.
+          </p>
+        </div>
+      </div>
+      <div class="content__invitation">
+        <div class="content__invitation-card">
+          <span class="content__invitation-icon"><i class="fa-solid fa-shuffle"></i></span>
+          <p class="content__invitation-title">Y más...</p>
+          <p class="content__invitation-text">
+            Tienes una idea adicional? Envíanos tus sugerencias estamos para
+            escucharte..
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container margin__bottom">
+    <h4 class="subtitle">Anímate a hacer tu evento único antes que inicie</h4>
+    <div class="buttons__container">
+      <div class="button__select-container">
+        <a href="./pages/designs.html" class="button__select">
+          <span>Elige un diseño</span>
+          <img src="./images/undraw_party_re_nmwj.svg" alt="s" />
+        </a>
+      </div>
+      <div class="button__select-container">
+        <a href="./pages/contact.html" class="button__select">
+          <span>Personaliza tu diseño</span>
+          <img src="./images/undraw_selecting_team_re_ndkb.svg" alt="s" />
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="separator"></div>
+    <div class="footer__about container">
+      <span> Copyright © 2022 Invit♥Arte </span>
+      <div class="footer__social">
+        <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+        <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+  <button class="button__top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script src="./js/main.js" type="module"></script>
+  <script src="./js/ui/typesEvents.js" type="module"></script>
+</body>
+
 </html>
