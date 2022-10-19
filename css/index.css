@@ -168,7 +168,7 @@ img {
 }
 
 .margin__bottom-lgg {
-  margin-bottom: 5rem;
+  margin-bottom: 5.5rem;
 }
 
 .margin__top-md {
@@ -641,6 +641,10 @@ img {
 
 .form__input.form__input-error {
   border-bottom: 2px solid #d23131;
+}
+
+.form__input.form__input-success {
+  border-bottom: 2px solid #25bd53;
 }
 
 .form__input-message {
