@@ -1,4 +1,7 @@
 import validator from "validator";
+
+import { createModal, deleteError, showError } from "./helpers/message";
+import { loginWithEmail, registerNewUser } from "./auth/signIn";
 // ---
 const btnShowPass = document.querySelector(".show__pass");
 const passwordInput = document.querySelector("[name=password]");
@@ -14,10 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
   showPassword();
 });
 
-const form = document.querySelector("form");
+/* Validacion del formulario de registro y el inicion de sesion */
+const formLogin = document.querySelector("#login");
+const formRegister = document.querySelector("#register");
 const formInputs = document.querySelectorAll(".form__input-container");
 const values = {};
-const camposValidados = {};
+const validFields = {
+  email: false,
+  password: false,
+  name: false,
+};
 
 const validateForm = ({ target }) => {
   if (!validator.isEmpty(target.value)) {
@@ -27,58 +36,82 @@ const validateForm = ({ target }) => {
       case "email":
         if (!validator.isEmail(target.value)) {
           showError(target, "Eso no parece un correo electrónico");
-          camposValidados[target.name] = false
+          validFields[target.name] = false;
         } else {
           deleteError(target);
-          camposValidados[target.name] = true
+          validFields[target.name] = true;
         }
         break;
       case "password":
         if (!validator.isStrongPassword(target.value, { minSymbols: 0 })) {
           showError(target, "Al menos 8 caracteres, una minúscula y un número");
-          camposValidados[target.name] = false
+          validFields[target.name] = false;
         } else {
           deleteError(target);
-          camposValidados[target.name] = true
+          validFields[target.name] = true;
         }
         break;
       case "name":
         if (!validator.isAlpha(target.value, "es-ES", { ignore: "-'s" })) {
           showError(target, "Eso no parece un nombre");
-          camposValidados[target.name] = false
+          validFields[target.name] = false;
         } else {
           deleteError(target);
-          camposValidados[target.name] = true
+          validFields[target.name] = true;
         }
         break;
     }
   } else {
     showError(target, "El campo no puede estar vacío");
+    validFields[target.name] = false;
   }
-};
-
-const showError = (element, message) => {
-  const formInput = element.parentElement;
-  const formInputContainer = element.parentElement.parentElement;
-  formInput.classList.remove("form__input-success");
-  formInput.classList.add("form__input-error");
-  formInputContainer.children[1].innerText = message;
-};
-
-const deleteError = (element) => {
-  const formInput = element.parentElement;
-  const formInputContainer = element.parentElement.parentElement;
-  formInput.classList.remove("form__input-error");
-  formInput.classList.add("form__input-success");
-  formInputContainer.children[1].innerText = "";
 };
 
 formInputs.forEach((input) => {
   input.addEventListener("blur", validateForm);
   input.addEventListener("keyup", validateForm);
+  input.addEventListener("focusout", validateForm);
 });
 
-form.addEventListener("submit", (e) => {
+//Pagina de Inicion de sesion
+formLogin?.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log(camposValidados);
+  if (!validFields.email || !validFields.password) {
+    createModal("Algo anda mal, revisa tus datos");
+    return;
+  }
+  loginWithEmail(values.email, values.password).then((data) => {
+    if (data.error) {
+      createModal(
+        data.error.message === "Invalid login credentials" &&
+          "Credenciales de acceso inválidas"
+      );
+      return;
+    }
+    window.location.href = "/";
+  });
+});
+
+//Pagina de registro
+formRegister?.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (!validFields.name || !validFields.email || !validFields.password) {
+    createModal("Algo anda mal, revisa tus datos");
+    return;
+  }
+
+  registerNewUser(values.email, values.password, values.name).then((data) => {
+    if (data.error) {
+      createModal(
+        data.error.message === "User already registered" &&
+          "Usuario ya registrado"
+      );
+      return;
+    }
+    createModal("Te has registrado correctamente, Redirigiendo... ", "success");
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 4500);
+  });
 });
