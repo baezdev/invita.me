@@ -709,6 +709,28 @@ img {
   color: var(--darkGreen);
 }
 
+.modal {
+  display: block;
+  width: fit-content;
+  padding: 3rem 5rem;
+  position: absolute;
+  background: transparent;
+  top: 0;
+  right: 0;
+  font-size: 2.3rem;
+  color: #fff;
+  font-weight: 700;
+  transition: all 3s ease-in-out;
+}
+
+.modal.modal__error {
+  background-color: #d23131;
+}
+
+.modal.modal__success {
+  background-color: #25bd53;
+}
+
 /* Home */
 
 .welcome__section-container {
