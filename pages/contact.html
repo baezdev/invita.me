@@ -51,17 +51,19 @@
         <div class="form">
           <h1>Envíanos un mensaje</h1>
           <p>Te contestaremos lo antes posible.</p>
-          <form class="form__inputs margin__top-md">
+          <form name="correo" class="form__inputs margin__top-md">
             <div class="form__input margin__bottom-md">
               <span><i class="fa-solid fa-user"></i></span>
-              <input type="text" name="name" placeholder="Nombre">
+              <input type="text" name="name" placeholder="Nombre" required>
             </div>
+            <!--Prueba de nodemailer-->
+            <!--Fin de las pruebas-->
             <div class="form__input margin__bottom-md">
               <span><i class="fa-solid fa-envelope"></i></span>
-              <input type="email" name="email" placeholder="Correo Electrónico">
+              <input type="email" name="email" placeholder="Correo Electrónico" required>
             </div>
             <textarea class="form__textarea margin__bottom-lg" name="message" id="" rows="7"
-              placeholder="Mensaje"></textarea>
+              placeholder="Mensaje" required></textarea>
             <div class="form__buttons">
               <button class="form__button form__button-primary">
                 <span class="form__button-text">Enviar</span>
@@ -69,6 +71,7 @@
               </button>
             </div>
           </form>
+          <script src="../config/mailer.ts"></script>
         </div>
       </div>
       <div class="contact__container">
