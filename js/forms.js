@@ -70,7 +70,6 @@ const validateForm = ({ target }) => {
 formInputs.forEach((input) => {
   input.addEventListener("blur", validateForm);
   input.addEventListener("keyup", validateForm);
-  input.addEventListener("focusout", validateForm);
 });
 
 //Pagina de Inicion de sesion
