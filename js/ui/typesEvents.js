@@ -3,35 +3,35 @@ export const createTypesEvents = () => {
   const events = [
     {
       name: "boda",
-      img: "./images/boda.webp",
+      img: "/images/boda.webp",
     },
     {
       name: "xv años",
-      img: "./images/xv.webp",
+      img: "/images/xv.webp",
     },
     {
       name: "baby shower",
-      img: "./images/baby.webp",
+      img: "/images/baby.webp",
     },
     {
       name: "bautizo",
-      img: "./images/bautizo.webp",
+      img: "/images/bautizo.webp",
     },
     {
       name: "despedida de solter@",
-      img: "./images/despedida.webp",
+      img: "/images/despedida.webp",
     },
     {
       name: "cumpleaños",
-      img: "./images/cumple.webp",
+      img: "/images/cumple.webp",
     },
     {
       name: "graduaciones",
-      img: "./images/graduacion.webp",
+      img: "/images/graduacion.webp",
     },
     {
       name: "y más...",
-      img: "./images/reunion.webp",
+      img: "/images/reunion.webp",
     },
   ];
 
