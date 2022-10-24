@@ -334,7 +334,7 @@ img {
   border-bottom: 0;
 }
 
-.navbar__menu-container a {
+.navbar__menu-container a, button {
   font-size: 2.2rem;
   text-decoration: none;
   text-transform: capitalize;
@@ -342,6 +342,20 @@ img {
   font-weight: 700;
   display: block;
   padding: 1.5rem 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navbar__menu-container button{
+  border: none;
+  padding: 2.5rem 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.button__signOut-name{
+  color: var(--yellow);
 }
 
 @media screen and (min-width: 1024px) {
@@ -385,6 +399,7 @@ img {
   color: var(--darkGreen);
   background: var(--yellow);
   width: 15%;
+  text-align: center;
 }
 
 /***** Header *****/
