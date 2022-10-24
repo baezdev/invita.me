@@ -31,21 +31,30 @@
           </div>
           <h1>Registrarse</h1>
           <p>Crea invitaciones a tu estilo.</p>
-          <form class="form__inputs margin__top-md">
-            <div class="form__input margin__bottom-md">
-              <span><i class="fa-solid fa-user"></i></span>
-              <input type="text" name="name" placeholder="Nombre">
-              <span><i class="fa-regular fa-circle-check"></i></span>
+          <form class="form__inputs margin__top-md" id="register">
+            <div class="form__input-container margin__bottom-lg">
+              <div class="form__input">
+                <span><i class="fa-solid fa-user"></i></span>
+                <input type="text" name="name" placeholder="Nombre">
+                <span class="form__input-status"><i class="fa-regular fa-circle-check"></i></span>
+              </div>
+              <span class="form__input-message"></span>
             </div>
-            <div class="form__input margin__bottom-md">
-              <span><i class="fa-solid fa-envelope"></i></span>
-              <input type="email" name="email" placeholder="Correo Electrónico">
-              <span><i class="fa-regular fa-circle-check"></i></span>
+            <div class="form__input-container margin__bottom-lg">
+              <div class="form__input">
+                <span><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" name="email" placeholder="Correo Electrónico">
+                <span class="form__input-status"><i class="fa-regular fa-circle-check"></i></span>
+              </div>
+              <span class="form__input-message"></span>
             </div>
-            <div class="form__input margin__bottom-lg">
-              <span><i class="fa-solid fa-lock"></i></span>
-              <input type="password" name="password" placeholder="Contraseña">
-              <button class="show__pass" id="btn__eye" type="button"><i class="fa-regular fa-eye"></i></button>
+            <div class="form__input-container margin__bottom-lgg">
+              <div class="form__input">
+                <span><i class="fa-solid fa-lock"></i></span>
+                <input type="password" name="password" placeholder="Contraseña">
+                <button class="show__pass" id="btn__eye" type="button"><i class="fa-regular fa-eye"></i></button>
+              </div>
+              <span class="form__input-message"></span>
             </div>
             <div class="form__buttons">
               <button class="form__button form__button-primary">

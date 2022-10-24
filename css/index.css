@@ -22,7 +22,7 @@
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 /* *::-webkit-scrollbar-track {
@@ -165,6 +165,10 @@ img {
 
 .margin__bottom-lg {
   margin-bottom: 4rem;
+}
+
+.margin__bottom-lgg {
+  margin-bottom: 5.5rem;
 }
 
 .margin__top-md {
@@ -330,7 +334,7 @@ img {
   border-bottom: 0;
 }
 
-.navbar__menu-container a {
+.navbar__menu-container a, button {
   font-size: 2.2rem;
   text-decoration: none;
   text-transform: capitalize;
@@ -338,6 +342,20 @@ img {
   font-weight: 700;
   display: block;
   padding: 1.5rem 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navbar__menu-container button{
+  border: none;
+  padding: 2.5rem 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.button__signOut-name{
+  color: var(--yellow);
 }
 
 @media screen and (min-width: 1024px) {
@@ -381,6 +399,7 @@ img {
   color: var(--darkGreen);
   background: var(--yellow);
   width: 15%;
+  text-align: center;
 }
 
 /***** Header *****/
@@ -583,7 +602,7 @@ img {
   gap: 2rem;
   padding: 1.5rem 0;
   justify-content: space-between;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 2px solid var(--gray);
 }
 
 .form__input span {
@@ -619,8 +638,37 @@ img {
 
 .form__input:focus-within,
 .form__textarea:focus {
-  border-bottom: 1px solid var(--mint);
+  border-bottom: 2px solid var(--mint);
   outline: none;
+}
+
+.form__input.form__input-error input {
+  color: #d23131;
+}
+
+.form__input.form__input-error .form__input-status {
+  color: #d23131;
+}
+
+.form__input.form__input-success .form__input-status {
+  color: #25bd53;
+}
+
+.form__input.form__input-error {
+  border-bottom: 2px solid #d23131;
+}
+
+.form__input.form__input-success {
+  border-bottom: 2px solid #25bd53;
+}
+
+.form__input-message {
+  font-weight: 600;
+  font-size: 1.6rem;
+  display: block;
+  margin-top: 1rem;
+  color: #d23131;
+  position: absolute;
 }
 
 .form__textarea {
@@ -629,7 +677,7 @@ img {
   font-weight: 700;
   width: 100%;
   resize: none;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 2px solid var(--gray);
 }
 
 .form__button {
@@ -674,6 +722,28 @@ img {
   align-items: center;
   justify-content: center;
   color: var(--darkGreen);
+}
+
+.modal {
+  display: block;
+  width: fit-content;
+  padding: 3rem 5rem;
+  position: absolute;
+  background: transparent;
+  top: 0;
+  right: 0;
+  font-size: 2.3rem;
+  color: #fff;
+  font-weight: 700;
+  transition: all 3s ease-in-out;
+}
+
+.modal.modal__error {
+  background-color: #d23131;
+}
+
+.modal.modal__success {
+  background-color: #25bd53;
 }
 
 /* Home */
@@ -1255,7 +1325,7 @@ img {
 }
 
 .plantilla:hover {
-  transform: translateY(-1.5rem);
+  transform: translateY(-0.8rem);
 }
 
 .contPlantillas {
