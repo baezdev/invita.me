@@ -51,14 +51,20 @@
         <div class="form">
           <h1>Envíanos un mensaje</h1>
           <p>Te contestaremos lo antes posible.</p>
-          <form class="form__inputs margin__top-md">
-            <div class="form__input margin__bottom-md">
-              <span><i class="fa-solid fa-user"></i></span>
-              <input type="text" name="name" placeholder="Nombre">
+          <form class="form__inputs margin__top-md" id="contact">
+            <div class="form__input-container margin__bottom-lg">
+              <div class="form__input">
+                <span><i class="fa-solid fa-user"></i></span>
+                <input type="text" name="name" placeholder="Nombre" id="name">
+              </div>
+              <span class="form__input-message"></span>
             </div>
-            <div class="form__input margin__bottom-md">
-              <span><i class="fa-solid fa-envelope"></i></span>
-              <input type="email" name="email" placeholder="Correo Electrónico">
+            <div class="form__input-container margin__bottom-lg">
+              <div class="form__input">
+                <span><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" name="email" placeholder="Correo Electrónico" id="email">
+              </div>
+              <span class="form__input-message"></span>
             </div>
             <textarea class="form__textarea margin__bottom-lg" name="message" id="" rows="7"
               placeholder="Mensaje"></textarea>
@@ -95,7 +101,8 @@
     <i class="fa-solid fa-arrow-up"></i>
   </button>
   <script src="../js/main.js" type="module"></script>
-  <script src="../js/contacto.js"></script>
+  <script src="../js/ui/contacto.js" type="module"></script>
+  <script src="../js/ui/forms.js" type="module"></script>
 </body>
 
 </html>
