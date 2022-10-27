@@ -1,13 +1,13 @@
 import validator from "validator";
 
-import { createModal, deleteError, showError } from "./helpers/message";
-import { loginWithEmail, registerNewUser } from "./auth/signIn";
+import { createModal, deleteError, showError } from "../helpers/message";
+import { loginWithEmail, registerNewUser } from "../auth/signIn";
 // ---
 const btnShowPass = document.querySelector(".show__pass");
 const passwordInput = document.querySelector("[name=password]");
 
 const showPassword = () => {
-  btnShowPass.addEventListener("click", () => {
+  btnShowPass?.addEventListener("click", () => {
     passwordInput.type =
       passwordInput.type === "password" ? "text" : "password";
   });
@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /* Validacion del formulario de registro y el inicion de sesion */
 const formLogin = document.querySelector("#login");
 const formRegister = document.querySelector("#register");
+const formContact = document.querySelector("#contact");
 const formInputs = document.querySelectorAll(".form__input-container");
 const values = {};
 const validFields = {
@@ -70,7 +71,6 @@ const validateForm = ({ target }) => {
 formInputs.forEach((input) => {
   input.addEventListener("blur", validateForm);
   input.addEventListener("keyup", validateForm);
-  input.addEventListener("focusout", validateForm);
 });
 
 //Pagina de Inicion de sesion
@@ -84,7 +84,7 @@ formLogin?.addEventListener("submit", (e) => {
     if (data.error) {
       createModal(
         data.error.message === "Invalid login credentials" &&
-          "Credenciales de acceso inválidas"
+          "Credenciales de acceso inválidas o no estas registrado 💔"
       );
       return;
     }
@@ -115,3 +115,13 @@ formRegister?.addEventListener("submit", (e) => {
     }, 4500);
   });
 });
+
+/* formContact?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!validFields.email || !validFields.name) {
+    createModal("Algo anda mal, revisa tus datos");
+    return;
+  }
+  console.log("nice");
+});
+ */

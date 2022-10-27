@@ -1,4 +1,5 @@
-import { supabase } from "../config/supabase.config";
+import { getUserLogged } from "../auth/getUser";
+import { signOut } from "../auth/signOut.js";
 
 export const showMenu = () => {
   const buttonMenu = document.querySelector(".button__menu");
@@ -16,6 +17,9 @@ export const showMenu = () => {
   });
 };
 
+/**
+ * Genera los enlaces de la barra de navegación y, si el usuario ha iniciado sesión, mostrará un botón para cerrar sesión.
+ */
 export const generateLinks = async () => {
   const navbarMenuContainer = document.querySelector(".navbar__menu-container");
   const links = [
@@ -40,15 +44,18 @@ export const generateLinks = async () => {
   const location = window.location.pathname;
   const isPage = location.includes("pages");
 
-  //Creacion del boton de cerrar sesion o de acceder
-  const authUser = await supabase.auth.getSession();
-  //Info de usuario
-  const { data } = await authUser;
+  const infoUser = await getUserLogged();
 
   const liLogin = document.createElement("li");
-  //Si una sesion iniciada mostrara el boton de cerrar sesion
-  if (data.session) {
-    const name = data.session.user.user_metadata.name;
+
+  if (!infoUser) {
+    const aLogin = document.createElement("a");
+    aLogin.href = isPage ? `./login.html` : `pages/login.html`;
+    aLogin.textContent = "acceder";
+    liLogin.appendChild(aLogin);
+    navbarMenuContainer.appendChild(liLogin);
+  } else {
+    const name = infoUser?.name;
     const logoutButton = document.createElement("button");
     //El boton tendra el nombre del usuario
     logoutButton.innerHTML = /* html */ `
@@ -58,17 +65,7 @@ export const generateLinks = async () => {
     liLogin.appendChild(logoutButton);
     navbarMenuContainer.appendChild(liLogin);
     //Cerrar sesion y recargar la pagina
-    logoutButton.addEventListener("click", async () => {
-      await supabase.auth.signOut();
-      window.location.reload();
-    });
-    //Mostrar enlace para acceder
-  } else {
-    const aLogin = document.createElement("a");
-    aLogin.href = isPage ? url : `pages/login.html`;
-    aLogin.textContent = "acceder";
-    liLogin.appendChild(aLogin);
-    navbarMenuContainer.appendChild(liLogin);
+    logoutButton.addEventListener("click", signOut);
   }
 
   links.map(({ text, url }) => {
