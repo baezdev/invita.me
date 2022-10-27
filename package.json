@@ -1,0 +1,21 @@
+{
+  "name": "invitarte_vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.4",
+    "gh-pages": "^4.0.0",
+    "nodemailer": "^6.8.0",
+    "validator": "^13.7.0"
+  }
+}
