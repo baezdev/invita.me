@@ -1,4 +1,5 @@
 import { supabase } from "../config/supabase.config.js";
+import { getUserLogged } from "./getUser.js";
 
 /**
  * Toma un correo electrónico, una contraseña y un nombre, y luego usa la API de autenticación de Supabase para crear un nuevo usuario
@@ -17,6 +18,15 @@ export const registerNewUser = async (email, password, name) => {
         name,
       },
     },
+  });
+
+  const { id, role } = await getUserLogged();
+
+  await supabase.from("users").insert({
+    id,
+    name,
+    email,
+    role
   });
 
   return await response;
